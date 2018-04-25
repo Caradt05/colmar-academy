@@ -1,13 +1,40 @@
 /* Universal Styles */
 
 html {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 .content {
   width: 100%;
   margin: 0;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.section-wrap {
+  display: flex;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.section-heading-desktop h1{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* Header */
@@ -17,16 +44,28 @@ header  {
   align-items: center;
   position: fixed;
   justify-content: space-between;
-  height: 60px;
+  height: 2.5rem;
   width: 100%;
   padding: 1rem 1.5rem;
   background-color: white;
+  z-index: 1;
 }
 
 header .logo {
   display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
   align-items: center;
   width: 40%;
+}
+
+#colmar {
+  font-weight: 900;
+}
+
+#academy  {
+  font-weight: 100;
+  color: #868686;
 }
 
 header a {
@@ -35,13 +74,53 @@ header a {
 
 }
 
-header nav ul {
+
+
+nav ul {
   display: flex;
+  margin-right: 1rem;
+  padding: 1rem 0;
+}
+
+nav li {
+  display: inline;
+  padding: 1rem;
+  font-size: 1.1rem;
 }
 
 header .mobile {
   display: none;
 }
+
+@media only screen and (max-width: 470px) {
+
+header .desktop {
+  display: none;
+}
+
+header nav .mobile {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+
+header .content {
+  padding: .5rem 0;
+}
+
+header .mobile ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+header .mobile li {
+  padding: 0;
+}
+
+}
+
 
 
 /* Main Banner */
@@ -49,7 +128,7 @@ header .mobile {
 .banner {
   display: inline-flex;
   align-items: center;
-  background-color: #999999;
+  background-color: #EBEBEB;
   width: 100%;
   margin-top: 90px;
 }
@@ -60,12 +139,469 @@ header .mobile {
   margin: 32px 24px;
 }
 
-#learn {
+.banner h1 {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.button {
+  display: flex;
+  background-color: #4a4a4a;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0;
+  width: 50%;
+  justify-content: center;
+  align-content: center;
+  border-radius: 2px;
+}
+
+.button a {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+/*Column 1 - Left*/
+
+
+.columnleft{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  padding-left: 1.5rem;
+}
+
+.main{
+  display: inline-block;
+  border: yellow solid 3px;
+}
+
+.main-img{
+  display:inline-block;
+  width: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.width60{
+ width: 100%;
+ height: auto;
+}
+
+.main-video{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+video {
+  position:relative;
+  width:100%;
+  height:auto;
+}
+
+.columnleft-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.columnleft h1{
+  font-family: 'Black Han Sans', sans-serif;
+  padding-bottom: 1.5rem;
+}
+
+.columnleft h2{
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.columnleft h4{
+  padding-bottom: 2rem;
+}
+
+.columnleft p{
+  padding-bottom: 2rem;
+}
+
+
+
+/*Column 2 - Right*/
+.columnright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  margin-left: 1.5rem;
+}
+
+.columnright-content{
+  display: flex;
+  flex-direction: column;
+  width: 57%;
+}
+
+.columnright h1{
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.columnright h2{
+  padding-bottom: 0.5rem;
+}
+
+.columnright p{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.container2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.container2 .desktop-img{
+  display:inline-block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.width35{
+  width: 100%;
+  height: auto;
+}
+
+.container2-content{
+  width: 65%;
+  height:auto;
+  padding-left: 1rem;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container2 a {
+  color: #28E686;
+  font-weight: bold;
+}
+
+.highlight{
+  background-color: black;
+  color: white;
+}
+
+.highlight a {
+  background-color: #EBEBEB;
+  padding: .3rem;
+  border-radius: 2px;
+  align-content: center;
+}
+
+.columnright-border{
+  border-left: #EBEBEB solid 1px;
+}
+
+/*Mobile Banner*/
+
+@media only screen and (max-width: 470px) {
+.section-wrap {
+  flex-flow: column;
+  padding: 0;
+  margin: 0;
+}
+
+.columnleft{
+  width: auto;
+  padding: 0;
+}
+
+.main-img{
+  padding: 0;
+  margin: 0;
+}
+
+.columnright{
+  width: auto;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.columnright-content{
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.columnright-content h1{
+  padding: 2rem 1rem;
+}
+
+.columnright-content h2{
+  padding: 0 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.button{
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  background-color: red;
+}
 
 }
 
-.banner.content {
+
+/*Information*/
+
+.information{
+  display: flex;
+}
+
+.mobile-img{
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+
+.information{
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.information .column-wrap .column1{
+  display: none;
+}
+
+.container2{
+  flex-flow: column;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.highlight .container2{
+  background-color: white;
+  padding-bottom: 0;
+}
+
+.desktop-img{
+  display: none;
+}
+
+.mobile-img{
+  display: inline-block;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.container2-content{
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.columnright-border{
+border-left: none;
+
+}
+
+}
+
+/*Courses*/
+
+.courses{
+  display: flex;
+  flex-direction: column;
+  background-color: #EBEBEB;
+  width: 100%;
+}
+
+.courses h1 {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.row {
+  display: flex;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.course-type {
+  display: flex;
+  background-color: white;
+  flex-direction:column;
+  width: 30%;
+  padding-bottom: 1.5rem;
+  margin: 1rem;
+}
+
+.course-type img{
+  width: 100%;
+  height: auto;
+}
+
+.course-type h2 {
+  margin: 1rem;
+}
+
+.course-type p {
+  width: 75%;
+  margin: 0.5rem 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+
+.courses{
+  background-color: white;
+  border-top: lightgrey solid 1px;
+  border-bottom: lightgrey solid 1px;
+}
+
+.course-options{
+  margin-bottom: 2rem;
+}
+
+.course-type{
+  width: auto;
+  margin:0 1rem;
+}
+.course-type p{
+  display: none;
+}
+
+.course-list{
+  display: none;
+}
+
+.course-content{
+  display: none;
+}
+
+.row{
+  flex-flow: column;
+  width: auto;
+  margin: 0 1rem;
+}
+
+.section-heading-desktop h1{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.course-type h2{
+  background-color: lightgrey;
+  width: auto;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+}
+
+}
+
+
+/*Thesis*/
+
+.thesis {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.section-heading-desktop h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Black Han Sans', sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section-heading-mobile{
+  display: none;
+}
+
+.container2-img {
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+
+.thesis{
+  flex-flow: column;
+  }
+
+.heading-container .section-heading-desktop{
+  display: none;
+}
+
+.heading-container .section-heading-mobile{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+.main-video{
+  margin-bottom: 1.5rem;
+}
+
+video{
+  border-top: lightgrey solid 1px;
+  border-bottom: lightgrey solid 1px;
+}
+
+.thesis .section-wrap .columnleft-content {
+  display: none;
+}
+
+.thesis .columnright {
+  display: none;
+}
+
+}
+
+
+/*Footer*/
+
+footer {
   display: flex;
   justify-content: space-between;
-  background-color: #999999;
+  padding: 1rem 1.5rem;
+  border-top: lightgrey solid 1px;
+}
+
+.tandp li{
+    display: inline;
+    font-size: 0.8rem;
+}
+
+footer p{
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 470px) {
+
+footer{
+  border-top: none;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.tandp{
+  display: none;
+}
+
 }
