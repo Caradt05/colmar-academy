@@ -37,9 +37,14 @@ body{
   padding-bottom: 2rem;
 }
 
+.main-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
 /* Header */
 
-header  {
+.header  {
   display: flex;
   align-items: center;
   position: fixed;
@@ -51,13 +56,14 @@ header  {
   z-index: 1;
 }
 
-header .logo {
+.logo {
   display: inline-flex;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   align-items: center;
   width: 40%;
 }
+
 
 #colmar {
   font-weight: 900;
@@ -91,35 +97,21 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 
-header .desktop {
-  display: none;
-}
+  header .desktop {
+    display: none;
+  }
 
-header .logo {
-  display: none;
-}
+  header .logo {
+    display: none;
+  }
 
-header .mobile {
-  display: block;
-  width: 100%;
-  height: 4rem;
-}
-
-header .content {
-  padding: .5rem 0;
-}
-
-header .mobile ul {
+  nav.mobile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-header .mobile li {
-  padding: 0;
 }
 
 }
@@ -129,21 +121,26 @@ header .mobile li {
 /* Main Banner */
 
 .banner {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #EBEBEB;
   width: 100%;
   margin-top: 90px;
 }
 
 .banner img {
-  width: 60%;
+  width: 70%;
   height: auto;
   margin: 32px 24px;
 }
 
 .banner h1 {
   font-family: 'Black Han Sans', sans-serif;
+}
+
+.banner-info {
+  margin-right: 5rem;
 }
 
 .button {
@@ -166,53 +163,35 @@ header .mobile li {
 
 /*Mobile Banner*/
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 .section-wrap {
-  flex-flow: column;
+  flex-direction: column;
+  max-width: 100%;
   padding: 0;
   margin: 0;
 }
 
 .banner {
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.banner-img {
   width: 100%;
+  padding: 0rem;
 }
 
-.columnleft{
-  width: auto;
-  padding: 0;
-}
-
-.main-img{
-  padding: 0;
-  margin: 0;
-}
-
-.columnright{
-  width: auto;
-  margin: 0 1rem;
-  padding: 0;
-}
-
-.columnright-content{
-  width: auto;
-  padding: 0;
-  margin: 0;
-}
-
-.columnright-content h1{
-  padding: 2rem 1rem;
-}
-
-.columnright-content h2{
-  padding: 0 1rem;
-  padding-bottom: 1.5rem;
-}
 
 .button{
   width: auto;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 0;
+}
+
+.banner-info {
+  font-size: 1rem;
+  margin-right: 1rem;
 }
 
 }
@@ -375,7 +354,7 @@ video {
   display: none;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 
 .information{
   padding-top: 1rem;
@@ -471,7 +450,7 @@ border-left: none;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 
 .courses{
   background-color: white;
@@ -523,7 +502,15 @@ border-left: none;
   margin-bottom: 0.5rem;
 }
 
+.container2 {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
+
+}
+
 
 
 /*Thesis*/
@@ -532,6 +519,10 @@ border-left: none;
   display: flex;
   flex-direction: column;
 
+}
+
+video {
+  width: 100%;
 }
 
 .section-heading-desktop h1{
@@ -550,7 +541,7 @@ border-left: none;
   padding: 1rem;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 
 .thesis{
   flex-flow: column;
@@ -606,7 +597,7 @@ footer p{
   font-size: 14px;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 575px) {
 
 footer{
   border-top: none;
